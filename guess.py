@@ -5,6 +5,9 @@ guess = -1
 rand = random.randint(1, 100)
 i = 1
 while guess != rand:
+    if i > 10:
+        print("Sorry, you've used all 10 attempts. The number was:", rand)
+        break
     try:
         guess = int(input("Guess a number between 1 and 100: "))
         if guess < rand:
